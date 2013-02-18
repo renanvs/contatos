@@ -35,14 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+//start
+
 -(void)pegaDadosDoFormulario:(id)sender{
-//    NSMutableDictionary * dadosDoContato = [[NSMutableDictionary alloc] init];
-//    [dadosDoContato setObject:[_nome text] forKey:@"nome"];
-//    [dadosDoContato setObject:[_telefone text] forKey:@"telefone"];
-//    [dadosDoContato setObject:[_endereco text] forKey:@"endereco"];
-//    [dadosDoContato setObject:[_email text] forKey:@"email"];
-//    [dadosDoContato setObject:[_site text] forKey:@"site"];
-//    NSLog(@"dados? %@", dadosDoContato);
     CONContato * contato = [[CONContato alloc]init];
     contato.nome = self.nome.text;
     contato.telefone = self.telefone.text;
@@ -50,6 +45,37 @@
     contato.email = self.email.text;
     contato.site = self.site.text;
     
-    NSLog(@"%@",contato);
+    [self.contatos addObject:contato];
+    
+    //NSLog(@"%@",contato);
+    //[self.site resignFirstResponder];
+    [self.view endEditing:YES];
+    NSLog(@"%@",self.contatos);
+}
+
+-(void)proximoElemento:(UITextField *)textField{
+    if(textField == self.nome){
+        [self.telefone becomeFirstResponder];
+    }else if(textField == self.telefone){
+        [self.email becomeFirstResponder];
+    }else if(textField == self.email){
+        [self.endereco becomeFirstResponder];
+    }else if(textField == self.endereco){
+        [self.telefone becomeFirstResponder];
+    }else if(textField == self.endereco){
+        [self.site becomeFirstResponder];
+    }else if(textField == self.site){
+        [self.site resignFirstResponder];
+    }
+}
+
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        self.contatos = [[NSMutableArray alloc]init];
+    }
+    
+    return self;
 }
 @end

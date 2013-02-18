@@ -18,5 +18,8 @@
 @property(nonatomic, weak) IBOutlet UITextField * site;
 
 -(IBAction)pegaDadosDoFormulario:(id)sender;
+-(IBAction)proximoElemento:(id)sender;
+
+@property (strong) NSMutableArray * contatos;
 
 @end

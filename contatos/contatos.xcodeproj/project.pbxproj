@@ -19,6 +19,7 @@
 		DB24269516CDAA3B0086FB3F /* CONFormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24269316CDAA3B0086FB3F /* CONFormularioContatoViewController.m */; };
 		DB24269616CDAA3B0086FB3F /* CONFormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB24269416CDAA3B0086FB3F /* CONFormularioContatoViewController.xib */; };
 		DB24269916CDBDC40086FB3F /* CONContato.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24269816CDBDC40086FB3F /* CONContato.m */; };
+		DB24269E16D1B2780086FB3F /* CONListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB24269D16D1B2780086FB3F /* CONListaContatosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,16 +31,18 @@
 		DB24267F16CDA5470086FB3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB24268116CDA5470086FB3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB24268316CDA5480086FB3F /* contatos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "contatos-Prefix.pch"; sourceTree = "<group>"; };
-		DB24268416CDA5480086FB3F /* CONAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CONAppDelegate.h; sourceTree = "<group>"; };
-		DB24268516CDA5480086FB3F /* CONAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CONAppDelegate.m; sourceTree = "<group>"; };
+		DB24268416CDA5480086FB3F /* CONAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CONAppDelegate.h; path = contatos/CONAppDelegate.h; sourceTree = "<group>"; };
+		DB24268516CDA5480086FB3F /* CONAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CONAppDelegate.m; path = contatos/CONAppDelegate.m; sourceTree = "<group>"; };
 		DB24268716CDA5480086FB3F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DB24268916CDA5480086FB3F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DB24268B16CDA5480086FB3F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DB24269216CDAA3B0086FB3F /* CONFormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONFormularioContatoViewController.h; sourceTree = "<group>"; };
 		DB24269316CDAA3B0086FB3F /* CONFormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONFormularioContatoViewController.m; sourceTree = "<group>"; };
 		DB24269416CDAA3B0086FB3F /* CONFormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CONFormularioContatoViewController.xib; sourceTree = "<group>"; };
-		DB24269716CDBDC40086FB3F /* CONContato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONContato.h; sourceTree = "<group>"; };
-		DB24269816CDBDC40086FB3F /* CONContato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONContato.m; sourceTree = "<group>"; };
+		DB24269716CDBDC40086FB3F /* CONContato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CONContato.h; path = contatos/CONContato.h; sourceTree = "<group>"; };
+		DB24269816CDBDC40086FB3F /* CONContato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CONContato.m; path = contatos/CONContato.m; sourceTree = "<group>"; };
+		DB24269C16D1B2780086FB3F /* CONListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CONListaContatosViewController.h; sourceTree = "<group>"; };
+		DB24269D16D1B2780086FB3F /* CONListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CONListaContatosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 		DB24266616CDA5470086FB3F = {
 			isa = PBXGroup;
 			children = (
+				DB24269B16D02E900086FB3F /* delegate */,
+				DB24269A16D02E7D0086FB3F /* classes */,
 				DB24267B16CDA5470086FB3F /* contatos */,
 				DB24267416CDA5470086FB3F /* Frameworks */,
 				DB24267216CDA5470086FB3F /* Products */,
@@ -86,12 +91,10 @@
 		DB24267B16CDA5470086FB3F /* contatos */ = {
 			isa = PBXGroup;
 			children = (
-				DB24268416CDA5480086FB3F /* CONAppDelegate.h */,
-				DB24268516CDA5480086FB3F /* CONAppDelegate.m */,
+				DB24269C16D1B2780086FB3F /* CONListaContatosViewController.h */,
+				DB24269D16D1B2780086FB3F /* CONListaContatosViewController.m */,
 				DB24269216CDAA3B0086FB3F /* CONFormularioContatoViewController.h */,
 				DB24269316CDAA3B0086FB3F /* CONFormularioContatoViewController.m */,
-				DB24269716CDBDC40086FB3F /* CONContato.h */,
-				DB24269816CDBDC40086FB3F /* CONContato.m */,
 				DB24269416CDAA3B0086FB3F /* CONFormularioContatoViewController.xib */,
 				DB24267C16CDA5470086FB3F /* Supporting Files */,
 			);
@@ -110,6 +113,24 @@
 				DB24268B16CDA5480086FB3F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB24269A16D02E7D0086FB3F /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				DB24269716CDBDC40086FB3F /* CONContato.h */,
+				DB24269816CDBDC40086FB3F /* CONContato.m */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		DB24269B16D02E900086FB3F /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DB24268416CDA5480086FB3F /* CONAppDelegate.h */,
+				DB24268516CDA5480086FB3F /* CONAppDelegate.m */,
+			);
+			name = delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +204,7 @@
 				DB24268616CDA5480086FB3F /* CONAppDelegate.m in Sources */,
 				DB24269516CDAA3B0086FB3F /* CONFormularioContatoViewController.m in Sources */,
 				DB24269916CDBDC40086FB3F /* CONContato.m in Sources */,
+				DB24269E16D1B2780086FB3F /* CONListaContatosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

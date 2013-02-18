@@ -8,6 +8,7 @@
 
 #import "CONAppDelegate.h"
 #import "CONFormularioContatoViewController.h"
+#import "CONListaContatosViewController.h"
 
 @implementation CONAppDelegate
 
@@ -15,8 +16,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //
-    CONFormularioContatoViewController * formulario = [[CONFormularioContatoViewController alloc]init];
-    self.window.rootViewController = formulario;
+//    CONFormularioContatoViewController * formulario = [[CONFormularioContatoViewController alloc]init];
+//    self.window.rootViewController = formulario;
+    CONListaContatosViewController * lista = [[CONListaContatosViewController alloc]init];
+    self.window.rootViewController = lista;
     //
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
